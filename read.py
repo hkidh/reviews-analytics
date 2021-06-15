@@ -19,3 +19,10 @@ print('小於100字的留言有', len(new), '筆')
 print(new[0])		
 #	sum_len += len(d) 			#計數清單中的字數
 #print('平均長度為:', sum_len/x)	#疊加字數/總筆數
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('一共有', len(good), '筆提到good')
+print(good[0]) 
