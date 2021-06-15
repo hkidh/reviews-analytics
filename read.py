@@ -9,8 +9,13 @@ with open('reviews.txt', 'r') as f: #開檔案
 		x = len(data)			#總筆數
 print('總共有', x, '筆')
 
-print(data[0])
-sum_len = 0  					#初終值
+#print(data[0])
+#sum_len = 0  					#初終值
+new = []
 for d in data:					#data(清單)中每個
-	sum_len += len(d) 			#計數清單中的字數
-print('平均長度為:', sum_len/x)	#疊加字數/總筆數
+	if len(d) < 100:
+		new.append(d)
+print('小於100字的留言有', len(new), '筆')
+print(new[0])		
+#	sum_len += len(d) 			#計數清單中的字數
+#print('平均長度為:', sum_len/x)	#疊加字數/總筆數
